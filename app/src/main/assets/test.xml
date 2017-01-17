@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Questionnaire>
+    <MultipleChoiceQ>
+        <Q1>
+            <c1>choice-1</c1>
+            <c2>choice-2</c2>
+            <c3>choice-3</c3>
+            <c4>choice-4</c4>
+        </Q1>
+        <Q2>123</Q2>
+        <Q3>456</Q3>
+    </MultipleChoiceQ>
+    <TrueFalseQ>
+        <Q1>Is he a boy?</Q1>
+        <Q2>Is she a pig?</Q2>
+        <Q3>Is it your pen?</Q3>
+    </TrueFalseQ>
+</Questionnaire>
+
