@@ -13,34 +13,17 @@
     tools:context="nthu.questionnaire.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/radioGroup1">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1111"
-            android:id="@+id/radButton1"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2222"
-            android:id="@+id/radButton2"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3333"
-            android:id="@+id/radButton3"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4444"
-            android:id="@+id/radButton4"/>
 
 
-    </RadioGroup>
+    <LinearLayout
+        android:id="@+id/questionFragment"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/previous"
