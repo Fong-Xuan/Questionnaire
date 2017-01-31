@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
     public int getQuestionLayout(int index){
 
         Resources res = getResources();
-        int id = res.getIdentifier("question"+String.valueOf(index+1), "layout", getPackageName());
+        int id = res.getIdentifier("question_"+String.valueOf(index+1), "layout", getPackageName());
 
 
         QuestionFragment fragment = QuestionFragment.newInstance(id);

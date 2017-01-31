@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical">
+
+	<TextView android:id="@+id/q2_category"
+	 android:layout_height="wrap_content"
+	 android:layout_width="wrap_content"
+	 android:text="personality"
+	 android:textColor="@android:color/black"
+	 android:textSize="20sp"
+	 android:typeface="serif"/>
+
+	<TextView android:id="@+id/q2_title"
+	 android:layout_below="@+id/q2_category"
+	 android:layout_height="wrap_content"
+	 android:layout_width="wrap_content"
+	 android:text="問題"
+	 android:textColor="@android:color/black"
+	 android:textSize="30sp"
+	 android:typeface="serif"/>
+
+	<RadioGroup android:id="@+id/q2_radioGroup"
+	 android:layout_height="wrap_content"
+	 android:layout_width="wrap_content"
+	 android:orientation="vertical"
+	>
+		<RadioButton android:id="@+id/q2_radButton0"
+		 android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:text="True"/>
+		<RadioButton android:id="@+id/q2_radButton1"
+		 android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:text="False"/>
+	</RadioGroup>
+
+
+</LinearLayout>

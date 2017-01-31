@@ -44,7 +44,7 @@ public class QuestionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
        // v = inflater.inflate(getLayoutId(), container, false);
         if(getLayoutId() == 0){
-            v = inflater.inflate(R.layout.question1, container, false);
+            v = inflater.inflate(R.layout.question_1, container, false);
 
         }
         else

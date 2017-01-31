@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+	 android:layout_width="match_parent"
+	 xmlns:android="http://schemas.android.com/apk/res/android"
+	 xmlns:app="http://schemas.android.com/apk/res-auto"
+	 xmlns:tools="http://schemas.android.com/tools"
+	 android:orientation="vertical">
+
+
+	<TextView android:id="@+id/q1_category"
+	 android:layout_height="wrap_content"
+	 android:layout_width="wrap_content"
+	 android:text="life"
+	 android:textColor="@android:color/black"
+	 android:textSize="20sp"
+	 android:typeface="serif" />
+	<TextView android:id="@+id/q1_title"
+	 android:layout_below="@+id/q1_category"
+	 android:layout_height="wrap_content"
+	 android:layout_width="wrap_content"
+	 android:text="問題"
+	 android:textColor="@android:color/black"
+	 android:textSize="30sp"
+	 android:typeface="serif"/>
+
+	<RadioGroup android:id="@+id/q1_radioGroup"
+	 android:layout_height="wrap_content"
+	 android:layout_width="wrap_content"
+	 android:orientation="vertical"
+	>
+		<RadioButton android:id="@+id/q1_radButton0"
+		 android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:text="you are pig"/>
+		<RadioButton android:id="@+id/q1_radButton1"
+		 android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:text="我是豬"/>
+		<RadioButton android:id="@+id/q1_radButton2"
+		 android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:text="Hello"/>
+		<RadioButton android:id="@+id/q1_radButton3"
+		 android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:text="this is test"/>
+	</RadioGroup>
+
+
+
+</LinearLayout>

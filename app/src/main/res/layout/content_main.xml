@@ -42,5 +42,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:onClick="onNextClick"
-        android:text="@string/next_page"/>
+        android:text="@string/next_page"
+        android:elevation="0dp" />
 </RelativeLayout>
