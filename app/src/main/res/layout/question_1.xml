@@ -8,42 +8,42 @@
 
 
 	<TextView android:id="@+id/q1_category"
-	 android:layout_height="wrap_content"
-	 android:layout_width="wrap_content"
-	 android:text="life"
-	 android:textColor="@android:color/black"
-	 android:textSize="20sp"
-	 android:typeface="serif" />
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:text="life"
+         android:textColor="@android:color/black"
+         android:textSize="20sp"
+         android:typeface="serif" />
 	<TextView android:id="@+id/q1_title"
-	 android:layout_below="@+id/q1_category"
-	 android:layout_height="wrap_content"
-	 android:layout_width="wrap_content"
-	 android:text="問題"
-	 android:textColor="@android:color/black"
-	 android:textSize="30sp"
-	 android:typeface="serif"/>
+         android:layout_below="@+id/q1_category"
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:text="問題"
+         android:textColor="@android:color/black"
+         android:textSize="30sp"
+         android:typeface="serif"/>
 
 	<RadioGroup android:id="@+id/q1_radioGroup"
-	 android:layout_height="wrap_content"
-	 android:layout_width="wrap_content"
-	 android:orientation="vertical"
-	>
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:orientation="vertical">
+
 		<RadioButton android:id="@+id/q1_radButton0"
-		 android:layout_height="wrap_content"
-		 android:layout_width="wrap_content"
-		 android:text="you are pig"/>
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text="you are pig"/>
 		<RadioButton android:id="@+id/q1_radButton1"
-		 android:layout_height="wrap_content"
-		 android:layout_width="wrap_content"
-		 android:text="我是豬"/>
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text="我是豬"/>
 		<RadioButton android:id="@+id/q1_radButton2"
-		 android:layout_height="wrap_content"
-		 android:layout_width="wrap_content"
-		 android:text="Hello"/>
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text="Hello"/>
 		<RadioButton android:id="@+id/q1_radButton3"
-		 android:layout_height="wrap_content"
-		 android:layout_width="wrap_content"
-		 android:text="this is test"/>
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text="this is test"/>
 	</RadioGroup>
 
 

@@ -1,9 +1,11 @@
 package nthu.questionnaire;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.Debug;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +23,7 @@ import android.widget.Toast;
 
 import static java.security.AccessController.getContext;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private QuestionsMgr QManaeger;
     private RadioGroup radioGroupQuestions;
@@ -50,12 +52,7 @@ public class MainActivity extends AppCompatActivity {
         QManaeger.parse();
         page_now = 0;
         record = new int[numberOfQuestions];
-//        radioGroupQuestions = (RadioGroup)findViewById(R.id.radioGroup1);
-//        q1 = (RadioButton) findViewById(R.id.radButton1);
-//        q2 = (RadioButton) findViewById(R.id.radButton2);
-//        q3 = (RadioButton) findViewById(R.id.radButton3);
-//        q4 = (RadioButton) findViewById(R.id.radButton4);
-//        radioGroupQuestions.setOnCheckedChangeListener(radGroupQuesListener);
+
         previousPage = (Button)findViewById(R.id.previous);
         nextPage = (Button)findViewById(R.id.next);
 
@@ -75,19 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
             };
 
-    public void onPreviousClick(View view){
-        //TO DO
-        Toast toast = Toast.makeText(this,
-                "Previous button", Toast.LENGTH_LONG);
-        toast.show();
-    }
-    public void onNextClick(View view){
-        //TO DO
-        Toast toast = Toast.makeText(this,
-                "Next button", Toast.LENGTH_LONG);
-        toast.show();
 
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -127,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         int id_tmp = fragment.getArguments().getInt("id", 0);
         fragment.setLayoutId(id);
 
-        Log.i("test", "getQuestionLayout: "+String.valueOf(id));
+        Log.i("test", "getQuestionLayout: "+String.valueOf(index));
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -145,24 +130,29 @@ public class MainActivity extends AppCompatActivity {
     private void setButton(){
         previousPage = (Button)findViewById(R.id.previous);
         nextPage = (Button)findViewById(R.id.next);
-        previousPage.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                if(page_now>0){
-                    getQuestionLayout(--page_now);
-                } else{
-                    getQuestionLayout(page_now);
-                }
-            }
+        previousPage.setOnClickListener(this);
+        nextPage.setOnClickListener(this);
 
-        });
-        nextPage.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                if(page_now < (MAXPageCount-1)) {
-                    getQuestionLayout(++page_now);
-                }
-            }
-        });
     }
+
+
+
+    @Override
+    public void onClick(View v) {
+        int vId = v.getId();
+        if(vId == R.id.previous){
+            if(page_now>0){
+                QuestionFragment fragment  = (QuestionFragment)getFragmentManager().findFragmentById(R.id.questionFragment);
+
+
+                getQuestionLayout(--page_now);
+            }
+        }else if(vId == R.id.next){
+            if(page_now < (MAXPageCount-1)) {
+
+                getQuestionLayout(++page_now);
+            }
+        }
+    }
+
 }
